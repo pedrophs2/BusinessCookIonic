@@ -1,0 +1,7 @@
+{
+  "name": "business-cook",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
