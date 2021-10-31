@@ -1,0 +1,23 @@
+h4 {
+    text-align: center;
+}
+
+#title {
+    font-size: medium;
+}
+
+.content {
+    padding: 20px;
+}
+
+.outline {
+    border-color: #403e39;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 3px;
+}
+
+.ripple-parent {
+    position: relative;
+    overflow: hidden;
+}

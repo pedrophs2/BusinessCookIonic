@@ -1,0 +1,21 @@
+#content {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#form {
+ width: 90%;
+}
+
+#header {
+    text-align: center;
+}
+
+.outline {
+    border-color: #403E39;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 3px;
+}

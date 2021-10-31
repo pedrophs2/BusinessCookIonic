@@ -1,0 +1,24 @@
+<div id='content'>
+  <div id='form'>
+    <div id='header'>
+      <h1>Login</h1>
+      <ion-note>Bem vindo ao Business Cook</ion-note>
+      <br>
+      <ion-note>Facilitando a cozinha</ion-note>
+    </div>
+    <br>
+    <div [formGroup]='formGroup'>
+      <ion-item class='outline'>
+        <ion-label position='floating'>Email</ion-label>
+        <ion-input type='email' formControlName='email'></ion-input>
+      </ion-item>
+      <br>
+      <ion-item class='outline'>
+        <ion-label position='floating'>Senha</ion-label>
+        <ion-input type='password' formControlName='password'></ion-input>
+      </ion-item>
+      <br>    
+      <ion-button expand='block' (click)='login()'>Login</ion-button>
+    </div>
+  </div>
+</div>
