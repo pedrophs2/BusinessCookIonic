@@ -1,0 +1,26 @@
+h1 {
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+#content {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#form {
+    width: 90%;
+}
+
+#back {
+    height: 60px;
+}
+
+.outline {
+    border-color: #403E39;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 3px;
+}

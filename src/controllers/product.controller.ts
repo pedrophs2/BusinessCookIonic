@@ -17,4 +17,14 @@ export class ProductController {
         return await this.http.post(`${this.url}/product`, product)
             .toPromise().then(p => p)
     }
+
+    public async update(product: any): Promise<any> {
+        return await this.http.put(`${this.url}/product`, product)
+            .toPromise().then(p => p)
+    }
+
+    public async get(id: number): Promise<any> {
+        return await this.http.get(`${this.url}/product/${id}`)
+            .toPromise().then(p => p)
+    }
 }

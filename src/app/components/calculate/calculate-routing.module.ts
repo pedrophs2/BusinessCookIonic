@@ -3,30 +3,21 @@ import { RouterModule, Routes } from '@angular/router';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { ProductController } from 'src/controllers/product.controller';
 import { ProductService } from 'src/services/api/product.service';
-import { ProductsComponent } from './products.component';
+import { CalculateComponent } from './calculate.component';
 
 const routes: Routes = [
   {
-    path: '', 
-    component: ProductsComponent
-  },
-  {
-    path: 'new', 
-    loadChildren: () => import('./../product/product.module').then(m => m.ProductModule)
-  },
-  {
-    path: ':id', 
-    loadChildren: () => import('./../product/product.module').then(m => m.ProductModule)
+    path: '', component: CalculateComponent
   }
-];
+]
 
 const components = [
-  ProductsComponent
+  CalculateComponent
 ]
 
 const providers = [
-  ProductController,
-  ProductService
+  ProductService,
+  ProductController
 ]
 
 @NgModule({
@@ -35,4 +26,4 @@ const providers = [
   exports: [RouterModule],
   providers: [...providers]
 })
-export class ProductsRoutingModule { }
+export class CalculateRoutingModule { }

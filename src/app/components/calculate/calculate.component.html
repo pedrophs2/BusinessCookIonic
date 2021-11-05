@@ -1,0 +1,45 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Calcular Valores</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Calcular Valores</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id='content'>
+    <div id='form' [formGroup]='formGroup'>
+      <h1>{{calculatedValue ? 'R$ ' + calculatedValue : 'Insira os valores abaixo'}}</h1>
+      <ion-item class='outline'>
+        <ion-label position='floating'>Ingredientes</ion-label>
+        <ion-select (ionChange)='setValues($event)'>
+          <ion-select-option *ngFor='let product of products' [value]='product.id'>{{product.name}}</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <br>
+      <ion-item class='outline'>
+        <ion-label position='floating'>Quantidade</ion-label>
+        <ion-input type='tel' formControlName='amount'></ion-input>
+      </ion-item>
+      <br>
+      <ion-item class='outline'>
+        <ion-label position='floating'>Valor</ion-label>
+        <ion-input type='tel' formControlName='price'></ion-input>
+      </ion-item>
+      <br>
+      <ion-item class='outline'>
+        <ion-label position='floating'>Quantidade Usada</ion-label>
+        <ion-input type='tel' formControlName='used'></ion-input>
+      </ion-item>
+      <br>
+      <ion-button expand='block' (click)='calculate()'>Calcular</ion-button>
+    </div>
+  </div>
+</ion-content>

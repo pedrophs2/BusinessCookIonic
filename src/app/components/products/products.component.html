@@ -17,7 +17,7 @@
   <div>
     <ion-list>
       <ion-list-header id='title'class='ion-activatable ripple-parent'>Produtos Cadastrados</ion-list-header>
-      <ion-item *ngFor='let product of products' detail button>
+      <ion-item *ngFor='let product of products' detail button routerLink='./{{product.id}}'>
         <ion-label>
           <h2>{{product.name}}</h2>
           <h3>{{product.amount}}g</h3>

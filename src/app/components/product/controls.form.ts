@@ -1,3 +1,3 @@
 export const controls = [
-    'name', 'amount', 'price'
+    'id', 'name', 'amount', 'price'
 ]

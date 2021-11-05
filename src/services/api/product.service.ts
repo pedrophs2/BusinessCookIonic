@@ -15,4 +15,12 @@ export class ProductService {
     public async create(product: any): Promise<any> {
         return await this.controller.create(product)
     }
+
+    public async update(product: any): Promise<any> {
+        return await this.controller.update(product)
+    }
+
+    public async get(id: number): Promise<any> {
+        return await this.controller.get(id)
+    }
 }
